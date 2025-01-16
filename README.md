@@ -1,6 +1,6 @@
-RedRain0o0
+Ori@RedRain0o0
 ----------
 Name: Ori
 Pronouns: Any
-Discord: RedRain0o0#0031
-Age: 15
+Discord: redrain0o0
+Uptime: 17 years
