@@ -12,6 +12,58 @@
   <div id="background">
     <div id="sidebar">
       <p>Cool and awesome Sidebar!</p>
+
+      <audio id="audio" loop>
+        <source src="assets/allisons-radio.ogg" type="audio/ogg">
+        <source src="assets/allisons-radio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!--<input onclick="document.getElementById('audio').pause()" id="radioOff" type="image" src="assets/allisons-radio.png" width="90" height="51" alt="Turn the radio on?" name="saveForm" class="btTxt submit" id="saveForm">-->
+
+
+      <div id="radioDiv">
+        <button onclick="toggleRadio()" class="radioButton" id="radioOff" style="display: block;">
+          <img src="assets/allisons-radio.png" width="90" height="51" title="Turn the radio on?">
+        </button>
+
+        <button onclick="toggleRadio()" class="radioButton" id="radioOn" style="display: none;">
+          <img src="assets/allisons-radio.gif" width="90" height="90" title="Turn the radio off?">
+        </button>
+        <!--input type="range" id="volumeSlider"-->
+      </div>
+
+      <script>
+        function radioVolume() {
+          var volume = document.getElementById('volumeSlider');
+          var audio = document.getElementById('audio');
+          volume.addEventListener("change", function(e) {
+              audio.volume = e.currentTarget.value / 100;
+          })
+        }
+      </script>
+
+
+      <!--<button onclick="document.getElementById('audio').volume += 0.1">Vol +</button> 
+      <button onclick="document.getElementById('audio').volume -= 0.1">Vol -</button>-->
+
+      <script>
+        function toggleRadio() {
+          var audio = document.getElementById('audio');
+          var radioOn = document.getElementById('radioOn');
+          var radioOff = document.getElementById('radioOff');
+          if (radioOn.style.display === "none") {
+            radioOn.style.display = "block";
+            radioOff.style.display = "none";
+            audio.play();
+          } else {
+            radioOn.style.display = "none";
+            radioOff.style.display = "block";
+            audio.pause();
+          }
+        }
+        </script>
+
       <div id="navbar">
         <a href="https://redrain0o0.github.io/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/home.png"></a>
         <a href="https://redrain0o0.github.io/RedRain0o0/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/redrain0o0.png"></a>

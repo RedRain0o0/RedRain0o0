@@ -46,6 +46,39 @@ h2{
   transform: translate(-50%, 0%);
 }
 
+#radioDiv {
+  position: fixed;
+  top: 50px;
+  left: 10%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, 0%);
+}
+
+#volumeSlider {
+  position: fixed;
+  bottom: -20px;
+  width: 90px;
+  transform: translate(-50%, 0%);
+}
+
+.radioButton {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#radioOn {
+  position: fixed;
+  bottom: 0px;
+  image-rendering: pixelated;
+}
+
+#radioOff {
+  position: fixed;
+  bottom: 0px;
+  image-rendering: pixelated;
+}
+
 #navbar {
   position: absolute;
   border: 3px solid rgb(208, 49, 68);
