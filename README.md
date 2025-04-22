@@ -1,8 +1,17 @@
-### Hello, I'm RedRain0o0!
-You can call me Ori! I'm an independent creator doing coding, music, art, and animation.
-- I go by any pronouns
-- If you want my socials, go to https://redrain0o0.github.io/RedRain0o0
-- You can contact me on Discord at redrain0o0, my dms are always open!
-
-
-![RedRain0o0's GitHub stats](https://github-readme-stats.vercel.app/api?username=redrain0o0&show_icons=true&theme=swift)
+```
+.O$@@@@@@$O.            .O$@@@@@@$O.  |  Ori@RedRain0o0
+O#:'    ':#O            O#:'    ':#O  |  --------------
+$:`      `:$            $:`      `:$  |  Name: Ori
+@'        '@            @'        '@  |  Pronouns: Any
+@          @.O$@@@@@@$O.@          @  |  Uptime: 17 years
+@          @O#:'    ':#O@          @  |  Discord: redrain0o0
+@          @$:`      `:$@          @  |  Bsky: @redrain0o0.github.io
+@          @:          :@          @  |  Twitter: @redrain0o0
+@          @$:,      ,:$@          @  |  YouTube: @redrain0o0
+@          @O#:.    .:#O@          @  |  
+@          @'O$@@@@@@$O'@          @  |  
+@.        .@            @.        .@  |  
+$:,      ,:$            $:,      ,:$  |  
+O#:.    .:#O            O#:.    .:#O  |  
+'O$@@@@@@$O'            'O$@@@@@@$O'  |  
+```
