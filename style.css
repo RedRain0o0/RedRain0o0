@@ -23,6 +23,7 @@ h2{
   outline-offset: -3px;
   width: 20%;
   height: 100%;
+  background-color: #8b2cc9;
   background : url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/2861690/523ba0496eb5d9844e5bb8d7ae5c261e0b13f228.jpg');
 }
 
@@ -30,6 +31,7 @@ h2{
   float:right;
   width: 80%;
   height: 100%;
+  background-color: #f75e72;
   background : url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/2861690/db29489e42cdc0a5fc9be523f5a58f90802f3981.jpg');
 }
 
