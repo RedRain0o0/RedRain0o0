@@ -6,3 +6,4 @@ You can call me Ori! I'm an independent creator doing coding, music, art, and an
 
 
 ![RedRain0o0's GitHub stats](https://github-readme-stats.vercel.app/api?username=redrain0o0&show_icons=true&theme=swift)
+
