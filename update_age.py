@@ -6,7 +6,7 @@ with open('readme.json') as f:
 with open('README.md','r') as f:
   content = f.read()
 
-var_dic.update(age=(var_dic.get(age)+1))
+#var_dic.update(age=(var_dic.get(age)+1))
 
 with open('readme.json','w') as f:
   f.write(var_dic)
