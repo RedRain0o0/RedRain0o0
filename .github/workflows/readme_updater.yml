@@ -13,12 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Update age
+        uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run python script
+        run: python replace_tag.py
+        
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run a multi-line script
+      - name: commit
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          git config --global user.email redraino.o.o.o.o@gmail.com
+          git config --global user.name redrain0o0
+          git add .
+          git commit -m "README update Automation" -a
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
