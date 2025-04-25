@@ -4,14 +4,16 @@ with open('readme.json') as f:
   var_dic = json.load(f)
 
 with open('README.md','r') as f:
-  content = f.read()
+  content = f.readlines()
 
 var_dic["age"] += 1
 
 jsoncontent = '{"age": ' + str(var_dic["age"]) + '}'
 
+content[4] = "@          @.O$@@@@@@$O.@          @  |  Uptime: " + str(var_dic["age"]) + " years"
+
 with open('readme.json','w') as f:
   f.write(jsoncontent)
 
 with open('README.md','w') as f:
-  f.write(content)
+  f.writelines(content)
