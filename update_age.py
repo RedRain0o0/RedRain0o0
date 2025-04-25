@@ -10,7 +10,7 @@ var_dic["age"] += 1
 
 jsoncontent = '{"age": ' + str(var_dic["age"]) + '}'
 
-content[4] = "@          @.O$@@@@@@$O.@          @  |  Uptime: " + str(var_dic["age"]) + " years"
+content[5] = "@          @.O$@@@@@@$O.@          @  |  Uptime: " + str(var_dic["age"]) + " years\n"
 
 with open('readme.json','w') as f:
   f.write(jsoncontent)
