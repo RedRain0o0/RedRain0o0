@@ -6,7 +6,7 @@ $:`      `:$            $:`      `:$  |  Name: Ori
 @          @:          :@          @  |  Repos: 46
 @          @O#:'    ':#O@          @  |  Kernal: 07.07.10.96890698
 @          @$:`      `:$@          @  |  Location: Canada
-@          @:          :@          @  |  Repos: 0
+@          @:          :@          @  |  Repos: 46
 @          @$:,      ,:$@          @  |  Discord: redrain0o0
 @          @O#:.    .:#O@          @  |  Bsky: @redrain0o0.github.io
 @          @'O$@@@@@@$O'@          @  |  Twitter: @redrain0o0
