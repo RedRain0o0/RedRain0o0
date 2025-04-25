@@ -3,7 +3,7 @@
 O#:'    ':#O            O#:'    ':#O  |  ------------------------
 $:`      `:$            $:`      `:$  |  Name: Ori
 @'        '@            @'        '@  |  Pronouns: Any
-@          @.O$@@@@@@$O.@          @  |  Uptime: 22 years
+@          @.O$@@@@@@$O.@          @  |  Uptime: 17 years
 @          @O#:'    ':#O@          @  |  Discord: redrain0o0
 @          @$:`      `:$@          @  |  Bsky: @redrain0o0.github.io
 @          @:          :@          @  |  Twitter: @redrain0o0
