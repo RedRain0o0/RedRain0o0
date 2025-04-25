@@ -12,7 +12,7 @@ with open('README.md','r') as f:
 jsoncontent = '{"age": ' + str(var_dic["age"]) + '}'
 
 with open('readme.json','w') as f:
-  f.write(var_dic)
+  f.write(jsoncontent)
 
 with open('README.md','w') as f:
   f.write(content)
