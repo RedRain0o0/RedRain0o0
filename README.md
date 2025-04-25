@@ -3,7 +3,7 @@
 O#:'    ':#O            O#:'    ':#O  |  ------------------------
 $:`      `:$            $:`      `:$  |  Name: Ori
 @'        '@            @'        '@  |  Pronouns: Any
-@          @.O$@@@@@@$O.@          @  |  Uptime: 17 years
+@          @:          :@          @  |  Repos: 46
 @          @O#:'    ':#O@          @  |  Kernal: 07.07.10.96890698
 @          @$:`      `:$@          @  |  Location: Canada
 @          @:          :@          @  |  Repos: 0
