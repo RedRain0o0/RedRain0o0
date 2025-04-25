@@ -9,7 +9,7 @@ with open('README.md','r') as f:
   content = f.readlines()
 
 
-content[5] = "@          @:          :@          @  |  Repos: " + str(apireq["public_repos"]) + "\n"
+content[8] = "@          @:          :@          @  |  Repos: " + str(apireq["public_repos"]) + "\n"
 
 with open('README.md','w') as f:
   f.writelines(content)
