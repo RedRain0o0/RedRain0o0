@@ -16,24 +16,20 @@ jobs:
       - name: Update age
         uses: actions/checkout@v4
 
-      - name: Run python script
-        run: |
-          python replace_tag.py
-        
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
+      - name: Setup Python Version
+        uses: actions/setup-python@v2
         with:
-          destination_branch: "main"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          python-version: 3.8
 
-      - name: commit
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip requests
+
+      - name: Execute Python script # Run the run.py to get the latest data
+        run: python update_age.py
+
+      - name: git stuff
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add .
-          git commit -m "README update Automation" -a
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git commit -am "README update Automation"
+          git push
