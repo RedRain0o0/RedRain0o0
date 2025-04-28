@@ -6,7 +6,7 @@ $:`      `:$            $:`      `:$  |  Name: Ori
 @          @.O$@@@@@@$O.@          @  |  Uptime: 17 years
 @          @O#:'    ':#O@          @  |  Kernal: 07.07.10.96890698
 @          @$:`      `:$@          @  |  Location: Canada
-@          @:          :@          @  |  Repos: 46
+@          @:          :@          @  |  Repos: 47
 @          @$:,      ,:$@          @  |  Discord: redrain0o0
 @          @O#:.    .:#O@          @  |  Bsky: @redrain0o0.github.io
 @          @'O$@@@@@@$O'@          @  |  Twitter: @redrain0o0
