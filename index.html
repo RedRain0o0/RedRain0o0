@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
   <script>
     function radioVolume() {
       var volume = document.getElementById('volumeSlider');
@@ -45,10 +46,13 @@
           <img src="assets/allisons-radio.gif" width="90" height="90" title="Turn the radio off?">
         </button>
       </div-->
-      <div id="accounts">
-        <div id="bsky">
-          
-        </div>
+      <div id="accountsDiv">
+        <span id="accountsSpan">
+          <div class="account" id="bsky">
+          </div>
+          <div class="account" id="github">
+          </div>
+        </span>
       </div>
       <div id="navbar">
         <a href="https://redrain0o0.github.io/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/home.png"></a>

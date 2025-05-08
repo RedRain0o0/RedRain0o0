@@ -60,7 +60,7 @@ h2{
   image-rendering: pixelated;
 }
 
-#accounts {
+#accountsDiv {
   position: absolute;
   top: 17px;
   left: 50%;
@@ -69,6 +69,32 @@ h2{
   border-radius: 7px;
   background-color: #fff;
   transform: translate(-50%, 0%);
+}
+
+#accountsSpan {
+  position: relative;
+  height: calc( 100% - 20px );
+  width: calc( 100% - 20px );
+  top: 10px;
+  left: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.account {
+	display: grid;
+	background: #a0a0a0;
+	grid-template-areas:
+		"icon name favicon"
+		"icon desc desc";
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	border-radius: 8px;
+	padding: 8px;
+	gap: 8px;
 }
 
 #navbar {
