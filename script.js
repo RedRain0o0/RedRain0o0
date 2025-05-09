@@ -21,11 +21,18 @@ function getBskyProfile() {
       container.appendChild(icon);
 
       link = document.createElement("a");
-      link.classList = "accountName";
+      link.classList = "accountLink";
       link.innerText = bsky.displayName
       link.href = "https://bsky.app/profile/" + bsky.handle;
       link.classlist = "accountLink";
       container.appendChild(link);
+
+      handle = document.createElement("a");
+      handle.classList = "accountHandle";
+      handle.innerText = "@" + bsky.handle
+      handle.href = "https://bsky.app/profile/" + bsky.handle;
+      handle.classlist = "accountLink";
+      container.appendChild(handle);
 
       desc = document.createElement("p");
       desc.innerText = bsky.description;

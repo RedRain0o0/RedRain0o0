@@ -86,38 +86,50 @@ h2{
 
 .account {
 	display: grid;
-	background: #a0a0a0;
+  background-color: #eee;
 	grid-template-areas:
-		"icon name favicon"
-		"icon desc desc";
+		"accountAvatar banner"
+		"accountLink accountLink"
+    "accountHandle accountHandle"
+    "followers following"
+    "desc desc";
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
-	border-radius: 8px;
+	border-radius: 15px;
 	padding: 8px;
 	gap: 8px;
 }
 
 .accountAvatar {
-	position:absolute;
-	width: 35%;
+	position: absolute;
+	width: 20%;
 	border-radius: 50%;
 }
 
 .accountLink {
+  position: relative;
+  top: 65px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
+  color: #000;
+  text-decoration: none;
 }
 
 .accountHandle {
+  position: relative;
+  top: 75px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 400;
+	font-weight: 300;
 	font-style: normal;
+  color: rgb(66, 87, 108);
+  text-decoration: none;
 }
 
 .accountDescription {
+  position: relative;
 	font-family: "Inter", sans-serif;
  	 font-optical-sizing: auto;
 	font-weight: 300;
