@@ -1,6 +1,6 @@
-funtion onLoad() {
-  getBskyProfile();
-}
+//funtion onLoad() {
+//  getBskyProfile();
+//}
 
 function getBskyProfile() {
   const url = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfiles?actors=did:plc:lzylocxb3cr2hhpjejy2d3qp";
