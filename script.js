@@ -27,7 +27,7 @@ function getBskyProfile() {
       container.appendChild(link);
 
       desc = document.createElement("p");
-      desc.innerText = project.description;
+      desc.innerText = bsky.description;
       desc.classList = "accountDescription"
       container.appendChild(desc)
 
