@@ -101,6 +101,27 @@ h2{
 	width: 20%;
 }
 
+.accountLink {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.accountHandle {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.accountDescription {
+	font-family: "Inter", sans-serif;
+ 	 font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
 #navbar {
   position: absolute;
   border: 3px solid rgb(208, 49, 68);
