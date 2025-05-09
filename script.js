@@ -24,6 +24,7 @@ function getBskyProfile() {
       link.classList = "accountName";
       link.innerText = bsky.displayName
       link.href = "https://bsky.app/profile/" + bsky.handle;
+      link.classlist = "accountLink";
       container.appendChild(link);
 
       desc = document.createElement("p");
