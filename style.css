@@ -97,6 +97,10 @@ h2{
 	gap: 8px;
 }
 
+.accountAvatar {
+	width: 20%;
+}
+
 #navbar {
   position: absolute;
   border: 3px solid rgb(208, 49, 68);
