@@ -85,51 +85,83 @@ h2{
 }
 
 .account {
-	display: grid;
-  background-color: #eee;
-	grid-template-areas:
-		"accountAvatar banner"
-		"accountLink accountLink"
-    "accountHandle accountHandle"
-    "followers following"
-    "desc desc";
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto 1fr;
+  position: relative;
+  background-color: #ddd;
+  width: 95%;
+  left: 0%;
 	border-radius: 15px;
 	padding: 8px;
-	gap: 8px;
+}
+
+#bskyAccount {
+  height: 170px;
 }
 
 .accountAvatar {
 	position: absolute;
+  top: 55px;
+  left: 10px;
 	width: 20%;
+  border:2px solid #ddd;
 	border-radius: 50%;
 }
 
-.accountLink {
-  position: relative;
-  top: 65px;
+.accountBanner {
+	position: absolute;
+  top: 0px;
+  left: 0px;
+	width: 100%;
+	border-radius: 15px;
+}
+
+.accountName {
+  position: absolute;
+  top: 115px;
+  left: 10px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 400;
+  font-size: 20px;
+	font-weight: 600;
 	font-style: normal;
   color: #000;
   text-decoration: none;
 }
 
 .accountHandle {
-  position: relative;
-  top: 75px;
+  position: absolute;
+  top: 135px;
+  left: 10px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
+  font-size: 15;
 	font-weight: 300;
 	font-style: normal;
   color: rgb(66, 87, 108);
   text-decoration: none;
 }
 
+.accountFollowDiv {
+  position: absolute;
+  top: 160px;
+  left: 10px;
+  font-size: 13px;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: rgb(66, 87, 108);
+  text-decoration: none;
+}
+
 .accountDescription {
-  position: relative;
+  position: absolute;
+  top: 165px;
+  left: 10px;
+  font-size: 14px;
+  text-align: left;
 	font-family: "Inter", sans-serif;
  	 font-optical-sizing: auto;
 	font-weight: 300;
