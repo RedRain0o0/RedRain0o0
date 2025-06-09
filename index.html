@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script>
+    function radioVolume() {
+      var volume = document.getElementById('volumeSlider');
+      var audio = document.getElementById('audio');
+      volume.addEventListener("change", function(e) {
+        audio.volume = e.currentTarget.value / 100;
+      })
+    }
+
+    function toggleRadio() {
+      var audio = document.getElementById('audio');
+      var radioOn = document.getElementById('radioOn');
+      var radioOff = document.getElementById('radioOff');
+      if (radioOn.style.display === "none") {
+        radioOn.style.display = "block";
+        radioOff.style.display = "none";
+        audio.play();
+      } else {
+        radioOn.style.display = "none";
+        radioOff.style.display = "block";
+        audio.pause();
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <head>
+    <title>RedRain0o0</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+  </head>
+
+  <body>
+    <div id="sidebar">
+      <audio id="audio" loop>
+        <source src="assets/allisons-radio.ogg" type="audio/ogg">
+        <source src="assets/allisons-radio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <!--div id="radioDiv">
+        <button onclick="toggleRadio()" class="radioButton" id="radioOff" style="display: block;">
+          <img src="assets/allisons-radio.png" width="90" height="51" title="Turn the radio on?">
+        </button>
+        <button onclick="toggleRadio()" class="radioButton" id="radioOn" style="display: none;">
+          <img src="assets/allisons-radio.gif" width="90" height="90" title="Turn the radio off?">
+        </button>
+      </div-->
+      <div id="accountsDiv">
+        <span id="accountsSpan">
+        </span>
+      </div>
+      <div id="navbar">
+        <a href="https://redrain0o0.github.io/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/home.png"></a>
+        <a href="https://redrain0o0.github.io/RedRain0o0/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/redrain0o0.png"></a>
+        <a href="https://redrain0o0.github.io/projects/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/projects.png"></a>
+        <a href="https://redrain0o0.github.io/the-gallery/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/the-gallery.png"></a>
+        <a href="https://discord.gg/zKSJkNBr67/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/discord.png"></a>
+        <a href="https://ko-fi.com/redrain0o0/"><img src="https://redrain0o0.github.io/RedRain0o0/assets/badges/nav/ko-fi.png"></a>
+      </div>
+      <div id="cool-ppl">
+        <a href="https://marlee-goat.neocities.org/"><img src="https://marlee-goat.neocities.org/marmar8831.gif"></a>
+        <a href="https://www.beegirl.gay/"><img src="https://www.beegirl.gay/CDN/badge.png"></a>
+      </div>
+    </div>
+    <div id="main-content">
+      <div id="content-frame">
+        <h1>Welcome to my website!</h1>
+        <p>My name is Ori, I'm an independant creator on multiple platforms.</p>
+        <p>Lorem ipsum! This page is being re-updated, so please bear with me!</p>
+        <p>We are fucking balling, but still in progress!</p>
+      </div>
+    </div>
+  </body>
+</html>
