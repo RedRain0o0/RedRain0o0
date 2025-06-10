@@ -109,58 +109,58 @@ function getGithubProfile() {
   .then(function(response) {
     response.json().then(function(account){
       github = account.profiles[0];
-      console.log("Account %s (@%s) has %s followers and %s following", github.displayName, github.handle, github.followersCount, github.followsCount);
+      console.log("Account %s has %s repos and %s gists", github.name, github.public_repos, github.public_gists);
       container = document.createElement("div")
 
       container.classList = "account";
       container.id = "githubAccount"
 
-      banner = document.createElement("img");
-      banner.src = github.banner;
-      banner.classList = "accountBanner"
-      container.appendChild(banner);
+      //banner = document.createElement("img");
+      //banner.src = github.banner;
+      //banner.classList = "accountBanner"
+      //container.appendChild(banner);
 
       icon = document.createElement("img");
-      icon.src = github.avatar;
+      icon.src = github.avatar_url;
       icon.classList = "accountAvatar"
       container.appendChild(icon);
 
       accname = document.createElement("a");
       accname.classList = "accountName";
       accname.innerText = github.displayName
-      accname.href = "https://github.app/profile/" + github.handle;
+      accname.href = "https://github.com/" + github.name;
       container.appendChild(accname);
 
-      handle = document.createElement("a");
-      handle.classList = "accountHandle";
-      handle.innerText = "@" + github.handle
-      handle.href = "https://github.app/profile/" + github.handle;
-      container.appendChild(handle);
+      //handle = document.createElement("a");
+      //handle.classList = "accountHandle";
+      //handle.innerText = "@" + github.handle
+      //handle.href = "https://github.app/profile/" + github.handle;
+      //container.appendChild(handle);
 
-      followDiv = document.createElement("div");
-      followDiv.classList = "accountFollowDiv";
-      //followDiv.style = "flex-direction: row; gap: 8px; align-items: center;";
-      container.appendChild(followDiv);
+      repoDiv = document.createElement("div");
+      repoDiv.classList = "accountRepoDiv";
+      //repoDiv.style = "flex-direction: row; gap: 8px; align-items: center;";
+      container.appendChild(repoDiv);
 
-      followers = document.createElement("a");
-      followers.classList = "accountFollowers";
-      followers.style = "text-decoration: none; gap: 8px; font-size: 13.125px; letter-spacing: 0px; color: rgb(11, 15, 20); flex-direction: row; line-height: 13.125px; font-family: Inter; font-variant: no-contextual;";
-      followers.href = "https://github.app/profile/" + github.handle + "/followers";
-      followers.dir = "auto";
-      followers.ariaLabel = github.followersCount + " followers  ";
-      followDiv.appendChild(followers);
+      repos = document.createElement("a");
+      repos.classList = "accountFollowers";
+      repos.style = "text-decoration: none; gap: 8px; font-size: 13.125px; letter-spacing: 0px; color: rgb(11, 15, 20); flex-direction: row; line-height: 13.125px; font-family: Inter; font-variant: no-contextual;";
+      repos.href = "https://github.com/" + github.name + "?tab=repositories";
+      repos.dir = "auto";
+      repos.ariaLabel = github.public_repos + " repos  ";
+      repoDiv.appendChild(repos);
 
-      followersNum = document.createElement("span");
-      followersNum.classList = "accountFollowersNum";
-      followersNum.style = "font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: Inter; font-variant: no-contextual;"
-      followersNum.innerText = github.followersCount + " ";
-      followers.appendChild(followersNum);
+      reposNum = document.createElement("span");
+      reposNum.classList = "accountFollowersNum";
+      reposNum.style = "font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      reposNum.innerText = github.public_repos + " ";
+      repos.appendChild(reposNum);
 
-      followersTxt = document.createElement("span");
-      followersTxt.classList = "accountFollowersTxt";
-      followersTxt.style = "font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: Inter; font-variant: no-contextual;"
-      followersTxt.innerText = "followers  ";
-      followers.appendChild(followersTxt);
+      reposTxt = document.createElement("span");
+      reposTxt.classList = "accountFollowersTxt";
+      reposTxt.style = "font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      reposTxt.innerText = "repos  ";
+      repos.appendChild(reposTxt);
 
       follows = document.createElement("a");
       follows.classList = "accountFollowers";
