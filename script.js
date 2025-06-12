@@ -30,6 +30,7 @@ function getBskyProfile() {
       icon = document.createElement("img");
       icon.src = bsky.avatar;
       icon.classList = "accountAvatar"
+      icon.id = "bskyAvatar"
       container.appendChild(icon);
 
       accname = document.createElement("a");
@@ -108,7 +109,7 @@ function getGithubProfile() {
   fetch(url)
   .then(function(response) {
     response.json().then(function(account){
-      github = account.profiles[0];
+      github = account;
       console.log("Account %s has %s repos and %s gists", github.name, github.public_repos, github.public_gists);
       container = document.createElement("div")
 
@@ -123,11 +124,13 @@ function getGithubProfile() {
       icon = document.createElement("img");
       icon.src = github.avatar_url;
       icon.classList = "accountAvatar"
+      icon.id = "githubAvatar"
       container.appendChild(icon);
 
       accname = document.createElement("a");
       accname.classList = "accountName";
-      accname.innerText = github.displayName
+      accname.classList = "githubName";
+      accname.innerText = github.name
       accname.href = "https://github.com/" + github.name;
       container.appendChild(accname);
 
@@ -162,32 +165,32 @@ function getGithubProfile() {
       reposTxt.innerText = "repos  ";
       repos.appendChild(reposTxt);
 
-      follows = document.createElement("a");
-      follows.classList = "accountFollowers";
-      follows.style = "text-decoration: none; gap: 8px; font-size: 13.125px; letter-spacing: 0px; color: rgb(11, 15, 20); flex-direction: row; line-height: 13.125px; font-family: Inter; font-variant: no-contextual;";
-      follows.href = "https://github.app/profile/" + github.handle + "/follows";
-      follows.dir = "auto";
-      follows.ariaLabel = github.followsCount + " following  ";
-      followDiv.appendChild(follows);
+      gists = document.createElement("a");
+      gists.classList = "accountFollowers";
+      gists.style = "text-decoration: none; gap: 8px; font-size: 13.125px; letter-spacing: 0px; color: rgb(11, 15, 20); flex-direction: row; line-height: 13.125px; font-family: Inter; font-variant: no-contextual;";
+      gists.href = "https://github.com/" + github.name + "/follows";
+      gists.dir = "auto";
+      gists.ariaLabel = github.public_gists + " gists  ";
+      repoDiv.appendChild(gists);
 
-      followsNum = document.createElement("span");
-      followsNum.classList = "accountFollowersNum";
-      followsNum.style = "font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: Inter; font-variant: no-contextual;"
-      followsNum.innerText = github.followsCount + " ";
-      follows.appendChild(followsNum);
+      gistsNum = document.createElement("span");
+      gistsNum.classList = "accountFollowersNum";
+      gistsNum.style = "font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      gistsNum.innerText = github.public_gists + " ";
+      gists.appendChild(gistsNum);
 
-      followsTxt = document.createElement("span");
-      followsTxt.classList = "accountFollowersTxt";
-      followsTxt.style = "font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: Inter; font-variant: no-contextual;"
-      followsTxt.innerText = "following  ";
-      follows.appendChild(followsTxt);
-      
-      // <span class="css-1jxf684" style="font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">202 </span><span class="css-1jxf684" style="font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">following</span></a><div dir="auto" class="css-146c3p1" style="font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">59 <span class="css-1jxf684" style="font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); font-weight: 400; line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">posts</span></div>
+      gistsTxt = document.createElement("span");
+      gistsTxt.classList = "accountFollowersTxt";
+      gistsTxt.style = "font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      gistsTxt.innerText = "gists  ";
+      gists.appendChild(gistsTxt);
+    
+      //<span class="css-1jxf684" style="font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">202 </span><span class="css-1jxf684" style="font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">following</span></a><div dir="auto" class="css-146c3p1" style="font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">59 <span class="css-1jxf684" style="font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); font-weight: 400; line-height: 15px; font-family: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-variant: no-contextual;">posts</span></div>
 
-      // desc = document.createElement("p");
-      // desc.innerText = bsky.description;
-      // desc.classList = "accountDescription"
-      // container.appendChild(desc)
+      //desc = document.createElement("p");
+      //desc.innerText = bsky.description;
+      //desc.classList = "accountDescription"
+      //container.appendChild(desc)
 
       accountsSpan.appendChild(container);
       addTempGap();
