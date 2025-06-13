@@ -100,12 +100,19 @@ h2{
 	padding: 8px;
 }
 
+.siteIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+}
+
 #bskyAccount {
-  height: 170px;
+  height: 185px;
 }
 
 #githubAccount {
-  height: 100px;
+  height: 105px;
 }
 
 .accountAvatar {
@@ -116,9 +123,9 @@ h2{
 	border-radius: 50%;
 }
 
-#githubAvatar {
+#bskyAvatar {
 	position: absolute;
-  top: 55px;
+  top: 66px;
 }
 
 #githubAvatar {
@@ -136,7 +143,6 @@ h2{
 
 .accountName {
   position: absolute;
-  top: 115px;
   left: 10px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
@@ -147,14 +153,18 @@ h2{
   text-decoration: none;
 }
 
+#bskyName {
+  position: absolute;
+  top: 128px;
+}
+
 #githubName {
   position: absolute;
-  top: 55px;
+  top: 73px;
 }
 
 .accountHandle {
   position: absolute;
-  top: 135px;
   left: 10px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
@@ -165,9 +175,13 @@ h2{
   text-decoration: none;
 }
 
-.accountFollowDiv {
+#bskyHandle {
   position: absolute;
-  top: 160px;
+  top: 148px;
+}
+
+.accountStatsDiv {
+  position: absolute;
   left: 10px;
   font-size: 13px;
 	font-family: "Inter", sans-serif;
@@ -181,20 +195,33 @@ h2{
   text-decoration: none;
 }
 
-.accountRepoDiv {
+#bskyStatsDiv {
   position: absolute;
-  top: 160px;
-  left: 10px;
-  font-size: 13px;
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 300;
-	font-style: normal;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
+  top: 175px;
+}
+
+#githubStatsDiv {
+  position: absolute;
+  top: 98px;
+}
+
+.accountStatsNum {
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: rgb(11, 15, 20);
+  font-weight: 600;
+  line-height: 15px;
+  font-family: Inter;
+  font-variant: no-contextual;
+}
+
+.accountStatsTxt {
+  font-size: 15px;
+  letter-spacing: 0px;
   color: rgb(66, 87, 108);
-  text-decoration: none;
+  line-height: 15px;
+  font-family: Inter;
+  font-variant: no-contextual;
 }
 
 .accountDescription {

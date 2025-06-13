@@ -27,6 +27,11 @@ function getBskyProfile() {
       banner.classList = "accountBanner"
       container.appendChild(banner);
 
+      site = document.createElement("img");
+      site.src = "assets/websites/bsky.svg";
+      site.classList = "siteIcon"
+      container.appendChild(site);
+
       icon = document.createElement("img");
       icon.src = bsky.avatar;
       icon.classList = "accountAvatar"
@@ -35,20 +40,23 @@ function getBskyProfile() {
 
       accname = document.createElement("a");
       accname.classList = "accountName";
+      accname.id = "bskyName";
       accname.innerText = bsky.displayName
       accname.href = "https://bsky.app/profile/" + bsky.handle;
       container.appendChild(accname);
 
       handle = document.createElement("a");
       handle.classList = "accountHandle";
+      handle.id = "bskyHandle";
       handle.innerText = "@" + bsky.handle
       handle.href = "https://bsky.app/profile/" + bsky.handle;
       container.appendChild(handle);
 
-      followDiv = document.createElement("div");
-      followDiv.classList = "accountFollowDiv";
+      statsDiv = document.createElement("div");
+      statsDiv.classList = "accountStatsDiv";
+      statsDiv.id = "bskyStatsDiv";
       //followDiv.style = "flex-direction: row; gap: 8px; align-items: center;";
-      container.appendChild(followDiv);
+      container.appendChild(statsDiv);
 
       followers = document.createElement("a");
       followers.classList = "accountFollowers";
@@ -56,17 +64,15 @@ function getBskyProfile() {
       followers.href = "https://bsky.app/profile/" + bsky.handle + "/followers";
       followers.dir = "auto";
       followers.ariaLabel = bsky.followersCount + " followers  ";
-      followDiv.appendChild(followers);
+      statsDiv.appendChild(followers);
 
       followersNum = document.createElement("span");
-      followersNum.classList = "accountFollowersNum";
-      followersNum.style = "font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      followersNum.classList = "accountStatsNum";
       followersNum.innerText = bsky.followersCount + " ";
       followers.appendChild(followersNum);
 
       followersTxt = document.createElement("span");
-      followersTxt.classList = "accountFollowersTxt";
-      followersTxt.style = "font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      followersTxt.classList = "accountStatsTxt";
       followersTxt.innerText = "followers  ";
       followers.appendChild(followersTxt);
 
@@ -76,17 +82,15 @@ function getBskyProfile() {
       follows.href = "https://bsky.app/profile/" + bsky.handle + "/follows";
       follows.dir = "auto";
       follows.ariaLabel = bsky.followsCount + " following  ";
-      followDiv.appendChild(follows);
+      statsDiv.appendChild(follows);
 
       followsNum = document.createElement("span");
-      followsNum.classList = "accountFollowersNum";
-      followsNum.style = "font-size: 15px; letter-spacing: 0px; color: rgb(11, 15, 20); font-weight: 600; line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      followsNum.classList = "accountStatsNum";
       followsNum.innerText = bsky.followsCount + " ";
       follows.appendChild(followsNum);
 
       followsTxt = document.createElement("span");
-      followsTxt.classList = "accountFollowersTxt";
-      followsTxt.style = "font-size: 15px; letter-spacing: 0px; color: rgb(66, 87, 108); line-height: 15px; font-family: Inter; font-variant: no-contextual;"
+      followsTxt.classList = "accountStatsTxt";
       followsTxt.innerText = "following  ";
       follows.appendChild(followsTxt);
       
@@ -116,10 +120,10 @@ function getGithubProfile() {
       container.classList = "account";
       container.id = "githubAccount"
 
-      //banner = document.createElement("img");
-      //banner.src = github.banner;
-      //banner.classList = "accountBanner"
-      //container.appendChild(banner);
+      site = document.createElement("img");
+      site.src = "assets/websites/github.svg";
+      site.classList = "siteIcon"
+      container.appendChild(site);
 
       icon = document.createElement("img");
       icon.src = github.avatar_url;
@@ -129,21 +133,15 @@ function getGithubProfile() {
 
       accname = document.createElement("a");
       accname.classList = "accountName";
-      accname.classList = "githubName";
+      accname.id = "githubName";
       accname.innerText = github.name
       accname.href = "https://github.com/" + github.name;
       container.appendChild(accname);
 
-      //handle = document.createElement("a");
-      //handle.classList = "accountHandle";
-      //handle.innerText = "@" + github.handle
-      //handle.href = "https://github.app/profile/" + github.handle;
-      //container.appendChild(handle);
-
-      repoDiv = document.createElement("div");
-      repoDiv.classList = "accountRepoDiv";
-      //repoDiv.style = "flex-direction: row; gap: 8px; align-items: center;";
-      container.appendChild(repoDiv);
+      statsDiv = document.createElement("div");
+      statsDiv.classList = "accountStatsDiv";
+      statsDiv.id = "githubStatsDiv";
+      container.appendChild(statsDiv);
 
       repos = document.createElement("a");
       repos.classList = "accountFollowers";
@@ -151,7 +149,7 @@ function getGithubProfile() {
       repos.href = "https://github.com/" + github.name + "?tab=repositories";
       repos.dir = "auto";
       repos.ariaLabel = github.public_repos + " repos  ";
-      repoDiv.appendChild(repos);
+      statsDiv.appendChild(repos);
 
       reposNum = document.createElement("span");
       reposNum.classList = "accountFollowersNum";
@@ -171,7 +169,7 @@ function getGithubProfile() {
       gists.href = "https://github.com/" + github.name + "/follows";
       gists.dir = "auto";
       gists.ariaLabel = github.public_gists + " gists  ";
-      repoDiv.appendChild(gists);
+      statsDiv.appendChild(gists);
 
       gistsNum = document.createElement("span");
       gistsNum.classList = "accountFollowersNum";
